@@ -1,0 +1,116 @@
+html,body {
+  background:#f4f8f9;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.morpion {
+  width:600px !important;
+}
+.superb {
+  background-color:white;
+  border:2px solid #c7e8ed;
+  border-radius:10px;
+}
+h2, h6 {
+  color:#138496;
+}
+hr {
+  border-color:#69c3d1;
+}
+.backgroundColor1 {
+  background-color:#fff2e5;
+}
+.backgroundColor2 {
+  background-color:white;
+}
+.backgroundColorWin {
+  background-color:palegreen;
+}
+.player {
+  width:100%;
+  height:100%;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  font: 170px "Fredoka One", sans-serif;
+  text-shadow: 2px 2px 0 #fff;
+  line-height: 180px;
+}
+.playerOne {
+  animation: growOnMe .25s;
+}
+.playerOne:after {
+  content: "X";
+}
+.playerTwo {
+  animation: growOnMe .25s;
+}
+.playerTwo:after {
+  content: "O";
+}
+.dimmer {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  background-color:white;
+  opacity: 0.7;
+  z-index: 666;
+}
+.popup {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color:tomato;
+  border-radius:10px;
+  cursor:pointer;
+  z-index: 668;
+  animation: growOnMe .25s;
+  background: url(img/refresh.svg) no-repeat 50% 50%;
+}
+.scoreC {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.spaceline {
+  white-space: pre;
+}
+.shadow {
+  text-shadow: 0 0 0.3vh #222;
+}
+#damier {
+  border-radius:10px;
+  overflow: hidden;
+}
+.hide {
+  display:none;
+}
+.show {
+  display:block;
+}
+.animate {
+  animation: growOnMe .25s;
+}
+.sp-replacer {
+  height:inherit !important;
+  width:65px !important;
+}
+.sp-dd {
+  line-height:inherit;
+}
+.input-names {
+  width:100px !important;
+}
+@keyframes growOnMe {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

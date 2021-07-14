@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tic-tac-doh!</title>
+  </head>
+  <body>
+     <div id="settings" class="container-xl morpion superb">
+      <div class="row">
+        <div class="col-12 mt-3 text-center">
+          <h2>Tic-tac-doh!</h2>
+          <hr>
+       </div>
+      </div>
+       <div class="row mt-3 mb-2">
+          <div class="col-12 text-center">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="checkbox" checked disabled>
+                </div>
+                <input id="J1-couleur" class="form-control" value="dodgerblue">
+                <label class="input-group-text input-names" for="J1-nom">Joueur 1</label>
+              </div>
+              <input id="J1-nom" class="form-control" onkeyup="checkValues()" placeholder="...">
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input id="checkbox" type="checkbox" onclick="showNameJ2()">
+                </div>
+                <input id="J2-couleur" class="form-control" value="lightsalmon">
+                <label id="CPU--J2" class="input-group-text input-names" for="J2-nom">CPU</label>
+              </div>
+              <input id="J2-nom" class="form-control" onkeyup="checkValues()" placeholder="..." style="display:none;">
+              <input id="J2-cpu" class="form-control" value="1" type="hidden">
+            </div>
+          </div>
+        </div>
+        <button id="generate" type="button" class="btn btn-info btn-lg btn-block mb-3" disabled>Lancer la partie</button>
+    </div>
+
+    <div id="magic" class="container-xl morpion hide">
+     <div class="row">
+        <div class="col-12">
+          <div class="col-12 mt-3 mb-1">
+            <div class="row">
+              <div id="score" class="col-5 alert alert-info text-center hide">
+                <h5 class="alert-heading scoreC">Score</h5>
+                <hr class="mt-1 mb-1">
+                <div id="players"><span id="playerName1"></span> <span id="score1" class="badge badge-secondary shadow">0</span> — <span id="score2" class="badge badge-secondary shadow">0</span> <span id="playerName2"></span></div>
+                <div id="draw">Egalité : <span id="scoreD" class="badge badge-secondary shadow">0</span></div>
+              </div>
+              <div id="infoBox" class="col-6 offset-1 alert alert-warning text-center hide">
+                <h5 id="information" class="alert-heading scoreC">Info</h5>
+                <hr class="mt-1 mb-1">
+                <div id="coord" class="spaceline text-center"></div>
+              </div>
+            </div>
+          </div>
+          <div id="damier" class="col-12 mt-2 mb-3 text-center"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $('#J1-couleur, #J2-couleur').spectrum({
+        type: "color"
+      });
+    </script>
+  </body>
+</html>
